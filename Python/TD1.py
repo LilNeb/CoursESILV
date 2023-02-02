@@ -157,8 +157,75 @@ def Exo10(arr,n = 1):
 #         return arr[::3]
 
 #Exo11 : EstPaire
-def Exo11(n):
-    return n % 2 == 0
+def Exo11():
+    x = int(input("Entrez un nombre entier : "))
+    if x % 2 == 0:
+        print("Le nombre est pair")
+    else:
+        print("Le nombre est impair")
+
+#Exo12 : Acronym
+def Exo12():    
+    phrase = input("Entrez une phrase : ")
+    phrase = phrase.upper()
+    phrase = phrase.split()
+    acronym = ""
+    for i in range(len(phrase)):
+        acronym += phrase[i][0]
+    print(acronym)
+
+#Exo13 : count c iterations
+def Exo13():
+    c = input("Entrez un caractère : ")
+    phrase = input("Entrez une phrase : ")
+    count = 0
+    for i in range(len(phrase)):
+        if phrase[i] == c:
+            count += 1
+    print("'c' apparaît  ",count, " fois dans ", phrase) 
+
+#Exo14 : vowel count
+def Exo14(phrase):
+    count = 0
+    for i in range(len(phrase)):
+        if phrase[i] in "aeiouy":
+            count += 1
+    return count
+
+#Exo15 : dictionnary
+def Exo15():
+    print(dico)
+    c = input("Entrez un mot : ")
+    if c in dico:
+        print(dico[c])
+    else:
+        print("Le mot n'est pas une clé du dictionnaire")
+
+#Exo16 : key in dict print value
+def Exo16():
+    print(dico)
+    c = input("Entrez une clé : ")
+    if c in dico:
+        print(dico[c])
+    else:
+        print("Le mot n'est pas une clé de ", dico)
+
+#Exo17 : dict mods
+def Exo17():    
+    dico["hello"] = "world"
+    print(dico)
+    dico["nombre"] = 0
+    del dico["pi"]
+
+#Exo18 : set creation
+def Exo18():
+    s1 = {1,2,3}
+    s2 = set()
+    s2.add("hello")
+    s2.add("world")
+    s3 = {10,20,30,40,10,2,40}
+    s4 = set(range(5,16))
+
 
 
 
@@ -202,6 +269,18 @@ if __name__ == '__main__' :
     print(Exo10([0, 1, 2, 3, 4], 1))
     print(Exo10([0, 1, 2, 3, 4], 2))
     print(Exo10([0, 1, 2, 3, 4], 3))
+
+    #Exo11()
+    #Exo12()
+    #Exo13()
+    print(Exo14("Bonjour"))
+
+    dico = {}
+    dico["pi"] = 3.141592653589793
+    dico["mot"] = "mot"
+    dico["nombre"] = 42
+    dico["liste"] = [1, 2, 3]
+    #Exo15()
 
     
 
