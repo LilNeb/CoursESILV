@@ -42,22 +42,27 @@ def Exo3(x1 = None, x2 = None, x3 = None):
 
 
 #Passe dans tous les index en vérifiant si la valeur est plus grande que la valeur max
-def Exo5(liste, debut=0, fin=None):
+def Exo4(liste, debut=0, fin=None):
     if fin is None:
         fin = len(liste) - 1
     max_val = liste[debut]
-    for i in range(debut + 1, fin + 1):
+    for i in range(debut, fin + 1):
         if liste[i] > max_val:
             max_val = liste[i]
     return max_val
 
 
-#ez way avec la fonction max()
+#Exo4 ez way avec la fonction max()
 
-# def Exo5(liste, debut=0, fin=None):
+# def Exo4(liste, debut=0, fin=None):
 #     if fin is None:
 #         fin = len(liste) 
 #     return max(liste[debut:fin])
+
+#Exo5
+
+
+
 
 
 # %% zone du main
@@ -74,3 +79,10 @@ if __name__ == '__main__' :
     print(Exo3(2,5,8))
 
     serie = [9, 3, 6, 1, 7, 5, 4, 8, 2]
+    print(Exo4(serie))
+    print(Exo4(serie, 2, 5))
+    print(Exo4(serie, 2))
+    print(Exo4(serie, fin=3, debut=1))
+
+
+    
